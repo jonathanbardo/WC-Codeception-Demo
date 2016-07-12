@@ -65,11 +65,14 @@ class AdminTestCest {
 	 */
 	public function validateAdminMenu( \AcceptanceTester $I ) {
 
-		$I->wantTo( 'Make sure the Dashboard admin menu is changed to "Codeception demo"' );
+		$I->wantTo( 'Make sure the Dashboard admin menu text is "Codeception demo"' );
 
 		$I->amOnPage( admin_url() );
 
-		$I->canSee( __( 'Codeception demo', 'codeception-demo' ), [ 'css' => '#menu-dashboard .wp-menu-name' ] );
+		$I->canSee(
+			__( 'Codeception demo', 'codeception-demo' ),
+			[ 'css' => '#menu-dashboard .wp-menu-name' ]
+		);
 
 	}
 

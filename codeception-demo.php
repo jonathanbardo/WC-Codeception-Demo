@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace  CodeceptionDemo;
+namespace CodeceptionDemo;
 
 if ( ! defined( 'ABSPATH' ) ) {
 
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'CodeceptionDemo\Loader' ) ) {
 
-	require 'includes/class-plugin.php';
+	require __DIR__ . '/includes/class-plugin.php';
 
 	class Loader {
 

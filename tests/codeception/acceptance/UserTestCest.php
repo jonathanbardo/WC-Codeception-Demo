@@ -51,16 +51,26 @@ class AdminTestCest {
 
 		$I->wantTo( 'Make sure the site description is "Codeception demo"' );
 
+		$I->amOnPage( home_url() );
+
+		$I->canSee( __( 'Codeception demo' ) );
+
 	}
 
 	/**
 	 * Validate that our admin menu has the right text
 	 *
+	 * @before login
 	 * @param AcceptanceTester $I
 	 */
 	public function validateAdminMenu( \AcceptanceTester $I ) {
 
 		$I->wantTo( 'Make sure the Dashboard admin menu text is "Codeception demo"' );
+
+
+		$I->amOnPage( admin_url() );
+
+		$I->canSee( __( 'Codeception demo' ) );
 
 	}
 
